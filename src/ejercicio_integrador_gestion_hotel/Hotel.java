@@ -87,6 +87,8 @@ public class Hotel {
     public boolean estaHabitacionDisponible(Habitacion habitacion, LocalDate inicio, LocalDate fin) {
         
         boolean disponibilidad = true;
+        
+        //Linea para probar el cambio en GitHub
         boolean a = true;
         
         // Recorro si la habitación está en la base de datos
@@ -104,6 +106,7 @@ public class Hotel {
                // En este caso, verifica que la solicitud no venga despues que la reserva
                boolean solapados =! (finSolicitud.isBefore(inicioReserva) || inicioSolicitud.isAfter(finReserva));
                 
+               // Verifica que las fechas no choquen
                 if (solapados) {
                     
                     disponibilidad = false;
